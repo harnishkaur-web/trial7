@@ -2,244 +2,254 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Personal AI Rulebook — Check Before You Use — Swift AI Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>My Personal AI Rulebook · Swift AI Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="app">
 
-  <div class="topbar">
-    <span class="schema">AAI-E-MC1-S03-RULE01 · MC1 / 1.3 Check Before You Use</span>
-    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-      <select class="jump-select" id="jumpSelect" onchange="current=parseInt(this.value);render();"></select>
-      <span class="gate-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        Gates the unit · Element 4
-      </span>
-    </div>
-  </div>
+  <header class="top">
+    <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Swift&nbsp;AI&nbsp;Academy</div>
+    <div class="top-meta">Section 1.3 · Check Before You Use</div>
+  </header>
 
-  <!-- PAGE 0: Brief -->
-  <div class="page active" data-page="0">
-    <div class="cover-sheet">
-      <div class="cover-kicker">Rulebook Section · 15 minutes</div>
-      <h1 class="cover-title">My Personal AI Rulebook</h1>
-      <p class="cover-lede">A short page, in your own words, about how you use AI tools. You fill it in about yourself — not a made-up character.</p>
+  <main class="stage">
 
-      <div class="cover-divider"></div>
-
-      <div class="cover-list">
-        <div class="cover-list-item">
-          <span class="cover-num">R1</span>
-          <div><b>The tools I'm approved to use</b><span>Assistant, account, device, and who you ask for help.</span></div>
+    <!-- 1 · Brief -->
+    <section class="slide" id="brief" data-next="Start">
+      <div class="card narrow">
+        <div class="head">
+          <div class="row"><div class="eyebrow">Rulebook Section · 15 min</div><span class="tag blue"><span data-i="lock"></span>Required step</span></div>
+          <h1 class="title">My Personal AI Rulebook</h1>
+          <p class="lede">One short page, in your own words, about how you use AI tools. Fill it in about yourself, not a made-up person.</p>
         </div>
-        <div class="cover-list-item">
-          <span class="cover-num">R3</span>
-          <div><b>How I check</b><span>Your marking routine and the sources you check against.</span></div>
+        <div class="rule"></div>
+        <div class="grid g2">
+          <div class="tile"><span class="dot-ic">R1</span><h3>The tools I am approved to use</h3><p>Your assistant, account, device, and who to ask for help.</p></div>
+          <div class="tile"><span class="dot-ic">R3</span><h3>How I check</h3><p>What you mark, and the sources you check against.</p></div>
         </div>
+        <div class="callout"><span data-i="lock"></span><span>Never add passwords, ID numbers, phone numbers, addresses, health details or marks. Nothing here is saved, so download your finished page at the end.</span></div>
+        <p class="code">AAI-E-MC1-S03-RULE01 · Element 4</p>
       </div>
+    </section>
 
-      <div class="privacy-strip">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><circle cx="12" cy="15" r="1.4"/></svg>
-        <span>No passwords, IDs, phone numbers, addresses, health info or marks — ever. Nothing here is saved, so screenshot your finished page.</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- PAGE 1: Why this matters -->
-  <div class="page" data-page="1">
-    <p class="kicker">Real life check</p>
-    <h2>Why keep a rulebook at all</h2>
-    <p>A rulebook is not extra paperwork. It is the one page you can point to later and say "this is how I work."</p>
-    <div class="stakes-grid">
-      <div class="stakes-card">
-        <div class="sicon" style="background:var(--plum);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-        <b>It travels with you</b>
-        <span>This same page continues into MC3, where you'll deepen it. Nothing here is thrown away.</span>
-      </div>
-      <div class="stakes-card">
-        <div class="sicon" style="background:var(--copper);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <b>It proves you can explain it</b>
-        <span>Writing your habits in your own words, and explaining them to a peer, shows real understanding.</span>
-      </div>
-      <div class="stakes-card">
-        <div class="sicon" style="background:var(--gold);"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-        <b>It keeps you consistent</b>
-        <span>The same routine, every time, on every real task — not something you reinvent each time.</span>
-      </div>
-    </div>
-    <div class="gate-note">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-      <span>That's why this section is a <b>mandatory, gated step</b> — the rulebook page must be completed, not skipped.</span>
-    </div>
-  </div>
-
-  <!-- PAGE 2: Worked example -->
-  <div class="page" data-page="2">
-    <p class="kicker">Before you fill your own</p>
-    <h2>See a completed example first</h2>
-    <p>Here is what a finished rulebook page looks like. This is made up — please do not copy the details, just the shape of the answers.</p>
-
-    <div class="lane-row">
-      <label for="laneSelect">Show example for:</label>
-      <select class="lane-select" id="laneSelect" onchange="renderExample()">
-        <option value="iti">ITI · Workshop trainee</option>
-        <option value="higher">Higher education · Student</option>
-      </select>
-    </div>
-
-    <div class="example-doc" id="exampleDoc"></div>
-  </div>
-
-  <!-- PAGE 3: Section R1 form -->
-  <div class="page" data-page="3">
-    <div class="two-col">
-      <div>
-        <p class="kicker">Section R1</p>
-        <h2>The tools I'm approved to use</h2>
-
-        <div class="field-block">
-          <label class="field-label">1. Which AI assistant am I approved to use?</label>
-          <input class="field-input" id="f_assistant" placeholder="Type the tool name here…" oninput="updatePreview()">
-          <div class="example-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg><span><b>Example:</b> "SwiftChat, approved by my facilitator"</span></div>
+    <!-- 2 · Why it matters -->
+    <section class="slide" id="why">
+      <div class="card">
+        <div class="head">
+          <div class="eyebrow">Why it matters</div>
+          <h2 class="title">Why keep a rulebook?</h2>
+          <p class="lede">It is not extra paperwork. It is one page you can point to and say: this is how I work.</p>
         </div>
-
-        <div class="field-block">
-          <label class="field-label">2. What type of account is it?</label>
-          <select class="field-select" id="f_account" onchange="updatePreview()" style="width:100%;min-width:0;">
-            <option value="">Choose…</option>
-            <option value="Institution-issued account">Institution-issued account</option>
-            <option value="Personal account approved for coursework">Personal account approved for coursework</option>
-            <option value="Shared lab account">Shared lab account</option>
-            <option value="Other">Other</option>
-          </select>
+        <div class="grid g3">
+          <div class="tile"><span class="dot-ic"><span data-i="arrow-right"></span></span><h3>It travels with you</h3><p>You will add to this same page in MC3. Nothing here is thrown away.</p></div>
+          <div class="tile"><span class="dot-ic"><span data-i="check"></span></span><h3>It shows you understand</h3><p>Writing your habits in your own words, and explaining them to a peer, shows real understanding.</p></div>
+          <div class="tile"><span class="dot-ic"><span data-i="refresh"></span></span><h3>It keeps you consistent</h3><p>The same routine, every time, on every real task.</p></div>
         </div>
-
-        <div class="field-block">
-          <label class="field-label">3. Which device do I use?</label>
-          <select class="field-select" id="f_device" onchange="updatePreview()" style="width:100%;min-width:0;">
-            <option value="">Choose…</option>
-            <option value="Shared lab computer">Shared lab computer</option>
-            <option value="My own phone">My own phone</option>
-            <option value="My own laptop">My own laptop</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        <div class="field-block">
-          <label class="field-label">4. Who do I ask when I'm stuck? (name or role only)</label>
-          <input class="field-input" id="f_help" placeholder="Type a name or role here…" oninput="updatePreview()">
-          <div class="example-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg><span><b>Example:</b> "My facilitator" — never a phone number or ID.</span></div>
-        </div>
+        <div class="callout info"><span data-i="lock"></span><span>That is why this is a <strong>required step</strong>. You must complete your rulebook page. It cannot be skipped.</span></div>
       </div>
+    </section>
 
-      <div id="passportSlotR1"></div>
-    </div>
-  </div>
-
-  <!-- PAGE 4: Section R3 form -->
-  <div class="page" data-page="4">
-    <div class="two-col">
-      <div>
-        <p class="kicker">Section R3</p>
-        <h2>How I check</h2>
-
-        <div class="field-block">
-          <label class="field-label">5. What do I mark before I trust an AI answer?</label>
-          <div class="checkbox-grid">
-            <label class="check-item"><input type="checkbox" class="chk-mark" onchange="updatePreview()"><span>Facts</span></label>
-            <label class="check-item"><input type="checkbox" class="chk-mark" onchange="updatePreview()"><span>Figures</span></label>
-            <label class="check-item"><input type="checkbox" class="chk-mark" onchange="updatePreview()"><span>Dates</span></label>
-            <label class="check-item"><input type="checkbox" class="chk-mark" onchange="updatePreview()"><span>Names</span></label>
-            <label class="check-item"><input type="checkbox" class="chk-mark" onchange="updatePreview()"><span>Sources</span></label>
+    <!-- 3 · Worked example -->
+    <section class="slide" id="example" data-next="Start my page">
+      <div class="card">
+        <div class="head-row">
+          <div class="head">
+            <div class="eyebrow">Before you start</div>
+            <h2 class="title">See a finished example</h2>
+            <p class="lede">This person is made up. Copy the shape of the answers, not the details.</p>
+          </div>
+          <div class="seg" id="lane" role="group" aria-label="Show example for">
+            <button type="button" aria-pressed="true" data-lane="iti"><span data-i="flask"></span>ITI trainee</button>
+            <button type="button" aria-pressed="false" data-lane="higher"><span data-i="book"></span>College student</button>
           </div>
         </div>
+        <div id="example-page"></div>
+      </div>
+    </section>
 
-        <div class="field-block">
-          <label class="field-label">6. What is my checking method?</label>
-          <div class="checkbox-grid">
-            <label class="check-item"><input type="checkbox" class="chk-method" onchange="updatePreview()"><span>I separate supported from unsupported</span></label>
-            <label class="check-item"><input type="checkbox" class="chk-method" onchange="updatePreview()"><span>I verify, replace, qualify or remove</span></label>
-            <label class="check-item"><input type="checkbox" class="chk-method" onchange="updatePreview()"><span>I pause before I send</span></label>
+    <!-- 4 · R1: assistant and account -->
+    <section class="slide" id="r1-tool">
+      <div class="card">
+        <div class="two-col">
+          <div class="col">
+            <div class="head">
+              <div class="eyebrow">Section R1 · My tools · 1 of 2</div>
+              <h2 class="title">Which AI tool am I approved to use?</h2>
+            </div>
+            <div class="field">
+              <label class="label" for="f-assistant">1. My approved AI assistant</label>
+              <input class="input" type="text" id="f-assistant" data-field placeholder="Type the tool name here">
+              <p class="small"><strong>Example:</strong> “SwiftChat, approved by my facilitator”</p>
+            </div>
+            <div class="field">
+              <span class="label" id="l-account">2. What kind of account is it?</span>
+              <div class="chips" data-single="account" role="group" aria-labelledby="l-account">
+                <button type="button" class="chip" aria-pressed="false">Account from my institute</button>
+                <button type="button" class="chip" aria-pressed="false">My own account, approved for coursework</button>
+                <button type="button" class="chip" aria-pressed="false">Shared lab account</button>
+                <button type="button" class="chip" aria-pressed="false">Other</button>
+              </div>
+            </div>
           </div>
-        </div>
-
-        <div class="field-block">
-          <label class="field-label">7. I check my AI's answers against…</label>
-          <input class="field-input" id="f_sources" placeholder="Type your sources here…" oninput="updatePreview()">
-          <div class="example-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg><span><b>Example:</b> "the tool register, the notice board, my facilitator"</span></div>
-        </div>
-
-        <div class="field-block">
-          <label class="field-label">8. I have explained this rulebook page to a peer</label>
-          <label class="check-item" style="margin-bottom:8px;"><input type="checkbox" id="f_peer_done" onchange="updatePreview()"><span>Yes, I have explained it</span></label>
-          <input class="field-input" id="f_peer_name" placeholder="Peer's name or role…" oninput="updatePreview()">
-        </div>
-
-        <div class="version-row">
-          <div class="field-block">
-            <label class="field-label">9. Version</label>
-            <input class="field-input" id="f_version" placeholder="v1" value="v1" oninput="updatePreview()">
-          </div>
-          <div class="field-block">
-            <label class="field-label">Date</label>
-            <input class="field-input" id="f_date" type="date" onchange="updatePreview()">
-          </div>
-        </div>
-
-        <div class="declaration-box">
-          <input type="checkbox" id="f_declare" onchange="updatePreview()">
-          <div><b>My declaration</b><span>These are my own rules, written in my own words.</span></div>
+          <div class="hide-sm" data-mini></div>
         </div>
       </div>
+    </section>
 
-      <div id="passportSlotR3"></div>
+    <!-- 5 · R1: device and help -->
+    <section class="slide" id="r1-help">
+      <div class="card">
+        <div class="two-col">
+          <div class="col">
+            <div class="head">
+              <div class="eyebrow">Section R1 · My tools · 2 of 2</div>
+              <h2 class="title">Where do I use it, and who helps me?</h2>
+            </div>
+            <div class="field">
+              <span class="label" id="l-device">3. Which device do I use?</span>
+              <div class="chips" data-single="device" role="group" aria-labelledby="l-device">
+                <button type="button" class="chip" aria-pressed="false">Shared lab computer</button>
+                <button type="button" class="chip" aria-pressed="false">My own phone</button>
+                <button type="button" class="chip" aria-pressed="false">My own laptop</button>
+                <button type="button" class="chip" aria-pressed="false">Other</button>
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="f-help">4. Who do I ask when I am stuck? <span class="help">Name or role only.</span></label>
+              <input class="input" type="text" id="f-help" data-field placeholder="Type a name or role here">
+              <p class="small"><strong>Example:</strong> “My facilitator”. Never a phone number or ID.</p>
+            </div>
+          </div>
+          <div class="hide-sm" data-mini></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6 · R3: what I mark and my method -->
+    <section class="slide" id="r3-mark">
+      <div class="card">
+        <div class="two-col">
+          <div class="col">
+            <div class="head">
+              <div class="eyebrow">Section R3 · How I check · 1 of 3</div>
+              <h2 class="title">What do I check before I trust an answer?</h2>
+            </div>
+            <div class="field">
+              <span class="label" id="l-marks">5. I mark these in every AI answer <span class="help">Tap all that apply.</span></span>
+              <div class="chips" data-multi="marks" role="group" aria-labelledby="l-marks">
+                <button type="button" class="chip" aria-pressed="false">Facts</button>
+                <button type="button" class="chip" aria-pressed="false">Numbers</button>
+                <button type="button" class="chip" aria-pressed="false">Dates</button>
+                <button type="button" class="chip" aria-pressed="false">Names</button>
+                <button type="button" class="chip" aria-pressed="false">Sources</button>
+              </div>
+            </div>
+            <div class="field">
+              <span class="label" id="l-method">6. My checking method <span class="help">Tap all that apply.</span></span>
+              <div class="checks" data-multi="method" role="group" aria-labelledby="l-method">
+                <button type="button" class="check" role="checkbox" aria-checked="false"><span class="box"></span><span>I separate what is supported from what is not</span></button>
+                <button type="button" class="check" role="checkbox" aria-checked="false"><span class="box"></span><span>I verify, then correct, qualify or remove</span></button>
+                <button type="button" class="check" role="checkbox" aria-checked="false"><span class="box"></span><span>I pause before I send</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="hide-sm" data-mini></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · R3: sources and peer -->
+    <section class="slide" id="r3-source">
+      <div class="card">
+        <div class="two-col">
+          <div class="col">
+            <div class="head">
+              <div class="eyebrow">Section R3 · How I check · 2 of 3</div>
+              <h2 class="title">What do I check against?</h2>
+            </div>
+            <div class="field">
+              <label class="label" for="f-sources">7. I check my AI's answers against</label>
+              <input class="input" type="text" id="f-sources" data-field placeholder="Type your sources here">
+              <p class="small"><strong>Example:</strong> “the tool register, the notice board, my facilitator”</p>
+            </div>
+            <div class="field">
+              <span class="label" id="l-peer">8. Explain this page to a peer</span>
+              <div class="checks" role="group" aria-labelledby="l-peer">
+                <button type="button" class="check" role="checkbox" aria-checked="false" id="f-peer-done"><span class="box"></span><span>Yes, I have explained it to a peer</span></button>
+              </div>
+              <input class="input" type="text" id="f-peer-name" data-field placeholder="Your peer's name or role">
+            </div>
+          </div>
+          <div class="hide-sm" data-mini></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · R3: version, date and declaration -->
+    <section class="slide" id="r3-sign" data-next="See my rulebook page">
+      <div class="card">
+        <div class="two-col">
+          <div class="col">
+            <div class="head">
+              <div class="eyebrow">Section R3 · How I check · 3 of 3</div>
+              <h2 class="title">Sign your page</h2>
+            </div>
+            <div class="grid g2 keep">
+              <div class="field">
+                <label class="label" for="f-version">9. Version</label>
+                <input class="input" type="text" id="f-version" data-field value="v1">
+              </div>
+              <div class="field">
+                <label class="label" for="f-date">Date</label>
+                <input class="input" type="date" id="f-date" data-field>
+              </div>
+            </div>
+            <button type="button" class="declare" id="f-declare" role="checkbox" aria-checked="false">
+              <span class="box"></span>
+              <span class="declare-text"><strong>My declaration</strong><span>These are my own rules, written in my own words.</span></span>
+            </button>
+          </div>
+          <div class="hide-sm" data-mini></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 · My rulebook page -->
+    <section class="slide" id="page" data-next="Download my page" data-icon="download">
+      <div class="card">
+        <div class="head">
+          <div class="eyebrow">Your rulebook page</div>
+          <h2 class="title">My Personal AI Rulebook, page 1.3</h2>
+        </div>
+        <div class="two-col">
+          <div id="final-page"></div>
+          <div class="col">
+            <div id="page-status"></div>
+            <div class="callout info"><span data-i="arrow-right"></span><span><strong>Keep this safe.</strong> You will open this page again in MC3 and add to your checking routine.</span></div>
+            <div class="row no-print">
+              <button type="button" class="btn btn-ghost btn-sm" id="print-page"><span data-i="file"></span>Print</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="foot-left" id="progress" role="status"></div>
+    <div class="nav">
+      <button type="button" class="btn btn-ghost" id="back"><span data-i="arrow-left"></span><span class="btn-back-label">Back</span></button>
+      <button type="button" class="btn btn-primary" id="primary">Continue</button>
     </div>
-  </div>
-
-  <!-- PAGE 5: My Rulebook Page -->
-  <div class="page" data-page="5">
-    <p class="kicker">Your rulebook page</p>
-    <h2>This is your Personal AI Rulebook, page 1.3</h2>
-    <p>Please screenshot or print this page. You will open it again and add to it in MC3.</p>
-    <div id="passportSlotFinal"></div>
-
-    <div class="recap-grid">
-      <div class="recap-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M9 4h6"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></svg><span>My tools</span></div>
-      <div class="recap-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span>My checks</span></div>
-      <div class="recap-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.9 3.1-6 7-6s7 2.1 7 6"/></svg><span>My peer</span></div>
-      <div class="recap-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>My word</span></div>
-    </div>
-
-    <div class="transfer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      <p><strong>Keep this safe.</strong> You will come back to this exact page in MC3 to deepen your checking routine, without losing what you wrote here.</p>
-    </div>
-  </div>
-
-  <div class="nav-row">
-    <button class="nav-btn" id="backBtn" onclick="changePage(-1)">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
-      Back
-    </button>
-    <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#A9987C;" id="pageCount">1 / 6</span>
-    <button class="nav-btn primary" id="nextBtn" onclick="changePage(1)">
-      Next
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
-    </button>
-  </div>
-
-  <footer>
-    <span>Swift AI Academy</span>
-    <span>PC 4.1–4.5 · PC 5.1–5.4 · English</span>
   </footer>
 
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
