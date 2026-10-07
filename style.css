@@ -1261,3 +1261,79 @@ input[type="date"].input { min-height: 2.6rem; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ESL upgrade (game-specific) */
+/* Hidden slides are display:none, so the kit's Next lock and the fit check only see the shown slide
+   (a hidden slide used to sit 10px lower and still count as visible). The shown slide still fades and rises in. */
+.slide { transform: none; }
+.slide:not(.show) { display: none; }
+.slide.show { animation: rb-rise 0.4s ease; }
+@keyframes rb-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide.show { animation: none; } }
+#example .seg { align-self: flex-start; }
+
+/* Game 18 designer assets (Oct 2026) */
+/* 1 · the one-page rulebook scene under the intro text */
+.rb-scene { margin: 0.4rem 0 0; }
+.rb-scene img { display: block; width: auto; height: 12.5rem; max-height: calc(30vh / var(--z, 1)); max-width: 100%; object-fit: contain; }
+/* 2 · reason icons on the card fronts (ivory, 24px) */
+.rb-card-ic { width: 24px; height: 24px; flex: 0 0 auto; }
+#why .saa-kit .saa-front { align-items: center; text-align: center; }
+#why .saa-kit .saa-card { min-height: max(clamp(84px, 14vh, 130px), calc(8.5rem)); }
+/* 3 · made-up author avatar in the example page header */
+.rb-author { margin: 0; flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0.15rem; }
+.rb-author img { width: 2.6rem; height: 2.6rem; display: block; border-radius: 50%; }
+.rb-author figcaption { font-size: 0.5rem; font-weight: 700; letter-spacing: 0.06em; color: var(--blue-ink); white-space: nowrap; line-height: 1; }
+/* screen 3 left column was a few px too tall at 1024x600: trim a little vertical spacing */
+html.saa-skin #example .head .title { margin-bottom: calc(8px / var(--z, 1)) !important; }
+html.saa-skin #example .head .saa-do { margin-top: calc(4px / var(--z, 1)) !important; }
+#example .seg button { min-height: 30px; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+html.saa-skin #example .saa-kit p.saa-q, html.saa-skin #example .saa-kit p.saa-k-why { margin-bottom: calc(4px / var(--z, 1)) !important; }
+/* 4 · tool name shortcuts (original logos on ivory mats) */
+.rb-picks { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0.45rem; }
+.rb-pick { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; padding: 0.3rem 0.25rem 0.3rem; border-radius: 12px; background: var(--blue-t); border: 1px solid var(--blue-l); color: var(--ink); font-size: 0.72rem; font-weight: 600; line-height: 1.2; min-width: 0; transition: background 0.2s ease, border-color 0.2s ease; }
+.rb-pick:hover { border-color: var(--blue); }
+.rb-pick[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: var(--on-blue); }
+.rb-pick > span:last-child { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rb-mat { width: 1.7rem; height: 1.7rem; border-radius: 8px; background: #F6F4EF; display: grid; place-items: center; flex: 0 0 auto; }
+.rb-mat img { width: 1.3rem; height: 1.3rem; display: block; object-fit: contain; }
+.rb-mat-other { color: #0E1A4F; font-size: 1.2rem; font-weight: 600; line-height: 1; }
+/* 4-6 · icons on account, device and "I mark" chips (20px); blue when off, ivory when picked */
+.rb-ic { width: 20px; height: 20px; flex: 0 0 auto; display: block; }
+.chip .rb-ic-on { display: none; }
+.chip[aria-pressed="true"] .rb-ic-on { display: block; }
+.chip[aria-pressed="true"] .rb-ic-off { display: none; }
+.chip:has(.rb-ic) { padding-left: 0.75rem; }
+/* 7 · three trusted source types under the example line */
+.rb-spots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+.rb-spots figure { margin: 0; display: flex; flex-direction: row; align-items: center; gap: 0.4rem; min-width: 0; padding: 0.2rem 0.5rem 0.2rem 0.25rem; border-radius: 12px; background: var(--glass-2); border: 1px solid var(--line); }
+.rb-spots img { display: block; height: 2.6rem; width: auto; max-width: 45%; object-fit: contain; flex: 0 0 auto; }
+.rb-spots figcaption { font-size: 0.75rem; font-weight: 600; line-height: 1.2; color: var(--ink-2); min-width: 0; }
+/* screen 7: the peer tick and the peer name sit side by side, so the source pictures fit without shrinking the text */
+@media (min-width: 761px) {
+  #r3-source .field:has(#f-peer-done) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; column-gap: 0.5rem; }
+  #r3-source .field:has(#f-peer-done) > .label { grid-column: 1 / -1; }
+  #r3-source .field:has(#f-peer-done) > .checks, #r3-source .field:has(#f-peer-done) > .checks > .check { height: 100%; }
+}
+@media (max-width: 760px) {
+  .rb-scene { display: none; } /* phones: keep the intro text at full size */
+  .rb-picks { gap: 0.35rem; }
+  .rb-pick { font-size: 0.66rem; padding-left: 0.1rem; padding-right: 0.1rem; }
+}
+
+/* Fix pass (Oct 2026) */
+/* quick-check feedback inside .head keeps its right/wrong colour */
+html .slide .head .saa-k-why.ok { color: var(--k-ok, var(--ok-ink)) !important; }
+html .slide .head .saa-k-why.bad { color: var(--k-bad, var(--bad-ink)) !important; }
+/* "Other" box under the account and device chips */
+.rb-other { margin-top: 0.5rem; }
+.rb-other[hidden] { display: none !important; }
+/* message when Continue is locked on an input screen */
+.rb-gate { margin: 0.6rem 0 0; padding: 0.55rem 0.8rem; border-radius: 12px; background: var(--bad-t); border: 1px solid var(--bad-l); color: var(--bad-ink); font-weight: 600; font-size: 0.875rem; line-height: 1.4; }
+.rb-gate[hidden] { display: none !important; }
+#primary.rb-locked { opacity: .45 !important; filter: saturate(.35) !important; box-shadow: none !important; cursor: not-allowed !important; }
+/* bigger tap targets for the game's own chips and lane switch on touch phones */
+@media (max-width: 760px), (pointer: coarse) {
+  .chip { min-height: 44px; }
+  .seg button { min-height: 44px; }
+}
